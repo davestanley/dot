@@ -1,0 +1,1 @@
+git config --global core.excludesfile ~/src/dot/gitignore_global
