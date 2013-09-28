@@ -4,7 +4,7 @@
 dir=~/src/dot
 
 #softlink dotfiles
-files="bashrc bash_aliases"
+files="bashrc bash_aliases.sh"
 for file in $files; do
     ln -s $dir/$file ~/.$file
 done
