@@ -1,14 +1,11 @@
 #!/bin/bash
-#run once
 
+#git repo path
 dir=~/src/dot
-olddir=~/dotfiles_old
-mkdir $olddir
 
-files="bashrc bash_aliases emacs.d"
-
+#softlink dotfiles
+files="bashrc bash_aliases"
 for file in $files; do
-    mv ~/.$file $olddir
     ln -s $dir/$file ~/.$file
 done
 
