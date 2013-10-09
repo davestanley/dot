@@ -1,7 +1,7 @@
 alias emacs-w="/usr/bin/emacs"
 alias emacs="emacs -nw"
 alias src="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
-
+alias lt="ls -lt | head"
 #ssh
 alias ssh_neuro="ssh kellyb@ssh.neuro.berkeley.edu"
 
