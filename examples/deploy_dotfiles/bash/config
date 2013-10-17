@@ -1,0 +1,87 @@
+export HISTCONTROL=ignoreboth
+export SVN_EDITOR=/usr/bin/vim
+export EDITOR="vim"
+
+# Keep detailed track of time in history
+export HISTTIMEFORMAT='%Y-%b-%d %a %H:%M:%S - '
+export PROMPT_COMMAND='history -a'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+lsgems() {
+  for dir in $(echo "${GEM_PATH:-"$(gem env gempath)"}" | tr ':' ' '); do
+    /bin/ls $dir/gems
+      done | sort | uniq
+      unset dir
+}
+
+#Move to a directory of a specific gem // cdgem rails
+cdgem() {
+  local gem_name="$1"
+    local gem_dir="$GEM_HOME"
+    if [[ -z "$gem_dir" ]]; then
+      local gem_dir=$(gem env gemdir)
+        fi
+        local full_gem_path="$gem_dir/gems/$gem_name"
+        if [[ -d "$full_gem_path" ]]; then
+          cd "$full_gem_path"
+        else
+          echo "Unknown gem: $gem_name" 2>&1
+            return 1
+            fi
+}
+function __bash_complete_cdgem {
+  local current gem_dir gem_list
+    COMPREPLY=()
+    current="${COMP_WORDS[COMP_CWORD]}"
+    if [[ ( ${COMP_CWORD} -eq 1 ) && ${COMP_WORDS[0]} == cdgem ]]; then
+      gem_dir="$GEM_HOME"
+        if [[ -z "$gem_dir" ]]; then
+          gem_dir=$(gem env gemdir)
+            fi
+            gem_list=$(ls "$gem_dir/gems/")
+            COMPREPLY=( $(compgen -W "$gem_list" -- "$current") )
+            fi
+}
+complete -F __bash_complete_cdgem cdgem
+
+
+# get the prompt set up for git
+function parse_git_branch {
+  git branch 2>/dev/null | grep '^*' | colrm 1 2 | sed 's_\(.*\)_(\1)_'
+}
+
+function git_dirty {
+  git diff --quiet HEAD &>/dev/null
+  [ $? == 1 ] && echo "!"
+}
+
+function set_term_title() {
+  echo $1;
+  echo -ne "\033]0;$1}\077";
+}
+
+GREEN="\[\033[01;32m\]"
+BLUE="\[\033[01;34m\]"
+RED="\[\033[0;31m\]"
+YELLOW="\[\033[0;33m\]"
+GRAY="\[\033[1;30m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+NONE="\[\033[0m\]"
+
+case $TERM in
+    screen*)
+        SCREENTITLE='\[\ek\e\\\]\[\ek\W\e\\\]'
+        ;;
+    xterm*)
+        SCREENTITLE="\033]0;\W\007"
+        ;;
+    *)
+        SCREENTITLE=''
+        ;;
+esac
+#export PS1="${SCREENTITLE}[\u@\h \W]\$ "
+export PS1="$GREEN\w$BLUE \$(~/.rvm/bin/rvm-prompt i v g):$YELLOW\$(parse_git_branch)$RED\$(git_dirty)$NONE\$ "

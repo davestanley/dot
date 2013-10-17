@@ -1,0 +1,69 @@
+alias h='history'
+alias c='clear'
+alias rbash='source ~/.bash_profile' #reload it
+
+alias sc='ruby script/console'
+alias ss="ruby script/server"
+
+#(i)gnore grep -- ignores .svn directories/files
+alias igrep="find . -path '*/.svn' -prune -o -type f -print0 | xargs -0 grep -I -n -e"
+
+alias rc='rails console'
+alias rs='rails server --debugger'
+
+alias gca="git commit -a -m"
+alias gc="git commit"
+alias gm="git commit -m"
+alias gd="git diff"
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls='ls -lAh --color'
+alias ll='ls -lAhrt --color'
+alias findi='find / -iname'
+alias ipconfig='system-config-network'
+
+alias dspace='du -h --max-depth=1'
+alias dfree='df -h'
+
+alias bashrc='nano ~/.bashrc'
+alias taillog='tail -f /var/www/m3/shared/log/production.log'
+
+
+alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log *'
+
+alias cuc="cucumber -fprogress --tags ~@watir features"
+
+
+alias autospecs='autospecs -fc'
+alias autotest='autotest -qp'
+alias alltests='rake spec:activity_plugin; rake parallel:spec -q; cuke'
+alias alltestsnop='rake spec:activity_plugin; spec spec; cuke'
+alias cuke='cucumber -fprogress --tags ~@watir --tags ~@maestro3_publish'
+
+alias pspecs='rake parallel:spec -q'
+
+alias genmigration='ruby script/generate migration'
+alias migrate='rake db:migrate:local parallel:migrate'
+alias actplugin='rake spec:activity_plugin'
+alias cover='rake spec:rcov'
+
+alias gpull='git pull; git submodule update;'
+
+alias cms='cd ~/dev/cms && rvm use ree@cms'
+alias cmsrails3='cd ~/dev/cms && rvm use ree@cms_rails3'
+alias mae='cd ~/dev/maestro_activity_engine'
+alias m3master='cd ~/dev/m3 && rvm use ree'
+alias m3='m3master'
+alias api='cd ~/dev/api'
+alias maestroclient='cd ~/dev/maestro_client && rvm use ree@maestro_client'
+
+alias uamaster='cd ~/dev/ua && rvm use ree'
+alias ua='uamaster'
+alias seecuke='SKIP_XVFB=true DISPLAY=:1 cucumber'
+
+alias cmsserver='cms; ruby script/server -p3002'
+alias uaserver='uamaster; ruby script/server -p3000'
+alias m3server='m3master; ruby script/server -p3001'
+alias apiserver='api; rails server -p 3003'
