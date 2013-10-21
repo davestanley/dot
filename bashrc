@@ -20,3 +20,7 @@ export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+# adjust process limits
+# so far does not seem necessary
+# see: http://blog.ghostinthemachines.com/2010/01/19/mac-os-x-fork-resource-temporarily-unavailable/
+# if [ `uname -n` = "cnd02510xg.vhl.dom" ]; then echo "true"; fi
