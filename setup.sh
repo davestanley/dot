@@ -9,5 +9,6 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+# executing this script does not re-source bashrc properly, but running this one line manually in CL does.
 source ~/.bashrc
 

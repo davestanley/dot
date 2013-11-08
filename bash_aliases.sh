@@ -3,6 +3,8 @@ alias emacs="emacs -nw"
 alias src="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
 alias lt="ls -lt | head"
 alias untar="~/src/untar.sh"
+alias ls='ls -GFh'
+
 #ssh
 alias ssh_neuro="ssh kellyb@ssh.neuro.berkeley.edu"
 alias ssh_hydra="sh ~/.hydra.sh"
