@@ -5,7 +5,7 @@ export path
 
 ls -al | grep bash
 # iterate over bashrc script files
-for script in .bash_*.sh
+for script in ~/.bash_*.sh
 do
 echo ${script}
 # check if the script is executable
