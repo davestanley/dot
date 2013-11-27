@@ -2,7 +2,7 @@ alias emacs-w="/usr/bin/emacs"
 alias emacs="emacs -nw"
 alias src="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
 alias lt="ls -lt | head"
-alias untar="~/src/untar.sh"
+alias untar="~/src/dot/untar.sh"
 alias ls='ls -GFh'
 
 #ssh
