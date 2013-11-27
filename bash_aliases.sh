@@ -1,9 +1,12 @@
+#!/bin/bash
+
 alias emacs-w="/usr/bin/emacs"
 alias emacs="emacs -nw"
 alias src="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
 alias lt="ls -lt | head"
 alias untar="~/src/dot/untar.sh"
-alias ls='ls -GFh'
+alias ls="ls -GFh"
+alias dot="cd ~/src/dot/"
 
 #ssh
 alias ssh_neuro="ssh kellyb@ssh.neuro.berkeley.edu"
