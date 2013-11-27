@@ -10,6 +10,7 @@ for file in $files; do
 done
 
 #softlink git ignore
+#this is not working in golgi git
 mkdir ~/.config 2> /dev/null
 mkdir ~/.config/git 2> /dev/null
 ln -s $dir/gitignore_global ~/.config/git/ignore 2> /dev/null
