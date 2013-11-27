@@ -15,6 +15,6 @@ mkdir ~/.config 2> /dev/null
 mkdir ~/.config/git 2> /dev/null
 ln -s $dir/gitignore_global ~/.config/git/ignore 2> /dev/null
 
-# executing this script does not re-source bashrc properly, but running this one line manually in CL does.
-source ~/.bashrc
+# re-source bashrc
+. ~/.bashrc
 
