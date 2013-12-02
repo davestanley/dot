@@ -1,8 +1,11 @@
 #!/bin/bash
 
+#Exports, should probably pop these into bash_exports sometime or something
 #add django-admin.py to the path
 PATH=$PATH\:/usr/lib/python2.7/dist-packages/django/bin/
 export path
+#in case I use svn again
+export SVN_EDITOR=emacs
 
 echo "Bash files:"
 ls -al | grep bash
