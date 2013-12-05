@@ -1,20 +1,21 @@
-#add django-admin.py to the path
-PATH=$PATH\:/usr/lib/python2.7/dist-packages/django/bin/
-export path
+#!/bin/bash
 
+#in case I use svn again
+export SVN_EDITOR=emacs
+
+echo "Bash files:"
 ls -al | grep bash
 # iterate over bashrc script files
-for script in .bash_*.sh
+for script in ~/.bash_*.sh
 do
-echo ${script}
 # check if the script is executable
 if [ -x "${script}" ]; then
 # run the script
-source ${script}
+  . ${script}
+else
+  echo "Script ${script} is not executable."
 fi
 done
-# on golgi, this loads bash aliases fine
-# this is still not getting aliases into the environment on work desktop. Colors work though.
 
 # colors
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "

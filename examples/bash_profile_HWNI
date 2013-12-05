@@ -1,0 +1,40 @@
+# .bashrc
+
+# Source global definitions
+if [ ${TERM} != "dumb" ]; then
+    if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+    fi
+fi
+
+# User specific aliases and functions
+export EDITOR='emacs -nw'
+export SVN_EDITOR='emacs -nw'
+alias emacs='emacs -nw'
+alias src='source ~/.bash_profile'
+
+#terminal colors:
+#eval "`dircolors -b $HOME/.dir_colors`"
+
+setterm -foreground white
+setterm -background black
+
+#appending to path
+
+PATH=$PATH:$HOME/bin
+PATH=$PATH:/home/knight/ecog/Scripts
+
+export PATH
+
+#Elan
+
+export ELANPATH=/usr/local/elan-20100210
+export PATH=$ELANPATH/bin64:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/X11R6/bin
+
+umask 0002
+
+#application aliases
+
+alias gpu_bioimage='vglrun +sync /usr/local/bioimagesuite/bioimagesuite261/start_bioimagesuite'
+alias gpu_matlab='gmatlab-2010b'
