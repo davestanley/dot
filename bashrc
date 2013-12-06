@@ -38,6 +38,7 @@ BBlue='\e[1;34m'        # Blue
 BPurple='\e[1;35m'      # Purple
 BCyan='\e[1;36m'        # Cyan
 BWhite='\e[1;37m'       # White
+BLight_Gray="\[\033[1;37m\]"
 
 # High Intensity
 IBlack='\e[0;90m'       # Black
@@ -72,10 +73,10 @@ function git_dirty {
   [ $? == 1 ] && echo "!"
 }
 # prompt components, set colors here using names from above
-ps1_user="$Blue\u$NONE"
-ps1_host="$Green\h$NONE"
-ps1_dir="$Yellow\w$NONE"
-ps1_git="$Light_Gray\$(parse_git_branch)$Red\$(git_dirty)$NONE"
+ps1_user="$BIBlue\u$NONE"
+ps1_host="$IGreen\h$NONE"
+ps1_dir="$BLight_Gray\w$NONE"
+ps1_git="$Yellow\$(parse_git_branch)$Red\$(git_dirty)$NONE"
 
 # actually construct prompt
 # reders as: user@host:dir (branch)! $
