@@ -26,6 +26,11 @@ GRAY="\[\033[1;30m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 NONE="\[\033[0m\]"
 
+# prompt components
+ps1_user="$BLUE\u$NONE"
+ps1_host="$GREEN\h$NONE"
+ps1_dir="$YELLOW\w$NONE"
+
 # git prompt components
 function parse_git_branch {
   git branch 2>/dev/null | grep '^*' | colrm 1 2 | sed 's_\(.*\)_(\1)_'
@@ -36,8 +41,13 @@ function git_dirty {
   [ $? == 1 ] && echo "!"
 }
 
+# git colors
+ps1_git="$LIGHT_GRAY\$(parse_git_branch)$RED\$(git_dirty)$NONE"
+
+
 # actually construct prompt
-export PS1="$BLUE\u$NONE@$GREEN\h:$YELLOW\w $LIGHT_GRAY\$(parse_git_branch)$RED\$(git_dirty)$NONE\$ "
+# reders as: user@host:dir (branch)! $
+export PS1="${ps1_user}@${ps1_host}:${ps1_dir}${ps1_git} \$ "
 
 # adjust process limits
 # so far does not seem necessary
