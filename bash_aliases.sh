@@ -8,6 +8,8 @@ alias untar="~/src/dot/untar.sh"
 alias ls="ls -GFh"
 alias dot="cd ~/src/dot/"
 
+alias textedit=/Applications/TextEdit.app/Contents/MacOS/TextEdit
+
 #ssh
 alias ssh_neuro="ssh kellyb@ssh.neuro.berkeley.edu"
 alias ssh_hydra="sh ~/.hydra.sh"
@@ -20,9 +22,11 @@ alias ssh_hydra="sh ~/.hydra.sh"
 #pipe to for clipboard
 alias clip="xclip -sel clip"
 
-#mac aliases
+#mac aliases -- need to make this conditional. Also the linux one.
+#alias clip="pbcopy"
 
 #machine specific aliases follow
+#alias sshfs_HWNI="/usr/local/sshfs/sshfs-static-leopard -o follow_symlinks kellyb@macfuse.neuro.berkeley.edu: ~/Desktop/HWNI"
 
 #golgi
 if [ `hostname` = "golgi" ]; then
