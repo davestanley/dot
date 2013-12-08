@@ -75,7 +75,7 @@ function git_dirty {
 # prompt components, set colors here using names from above
 ps1_user="$BIBlue\u$NONE"
 ps1_host="$IGreen\h$NONE"
-ps1_dir="$BLight_Gray\w$NONE"
+ps1_dir="$BIYellow\w$NONE"
 ps1_git="$Yellow\$(parse_git_branch)$Red\$(git_dirty)$NONE"
 
 # actually construct prompt
