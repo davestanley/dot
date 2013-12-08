@@ -9,12 +9,11 @@ for file in $files; do
     ln -s $dir/$file ~/.$file 2> /dev/null
 done
 
+# this does not seem necessary. For now, a path (~/src...) in ~/.gitconfig to the versioned gitignore_global file seems to work. On golgi.
 # softlink git ignore
-# this is not working in golgi git
-# maybe try git config --global core.excludesfile ~/src/dot/gitignore_global
-mkdir ~/.config 2> /dev/null
-mkdir ~/.config/git 2> /dev/null
-ln -s $dir/gitignore_global ~/.config/git/ignore 2> /dev/null
+#mkdir ~/.config 2> /dev/null
+#mkdir ~/.config/git 2> /dev/null
+#ln -s $dir/gitignore_global ~/.config/git/ignore 2> /dev/null
 
 
 # re-source bashrc

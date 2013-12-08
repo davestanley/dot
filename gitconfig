@@ -29,6 +29,7 @@
         filemode = false
         autocrlf = input
 	editor = emacs
+	excludesfile = ~/src/dot/gitignore_global
 [rerere]
         enabled = 1
 [push]
