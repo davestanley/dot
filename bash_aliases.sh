@@ -12,7 +12,7 @@ alias textedit=/Applications/TextEdit.app/Contents/MacOS/TextEdit
 
 #ssh
 alias ssh_neuro="ssh kellyb@ssh.neuro.berkeley.edu"
-alias ssh_hydra="sh ~/.hydra.sh"
+
 
 #sshfs
 #need to make this more cross-computer friendly
