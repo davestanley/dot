@@ -16,7 +16,7 @@
         br = branch
         co = checkout
 	nb = checkout -b
-	fpush = push --set-upstream origin
+	fpush = push origin -u HEAD
         df = diff --word-diff=color
         lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr - %cn)%Creset' --abbrev-commit --date=relative
         sub = submodule update
