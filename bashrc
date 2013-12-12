@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# make emacs everywhere
+export EDITOR=emacs
 #in case I use svn again
 export SVN_EDITOR=emacs
 
