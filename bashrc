@@ -83,7 +83,7 @@ ps1_git="$Yellow\$(parse_git_branch)$Red\$(git_dirty)$NONE"
 # actually construct prompt
 # reders as: user@host:dir (branch)! $
 # delimiters between prompt components (like :@) are your default terminal text color, i.e. white
-export PS1="${ps1_user}@${ps1_host}:${ps1_dir}${ps1_git} \$ "
+export PS1="\[${ps1_user}@${ps1_host}:${ps1_dir}${ps1_git} \$ "
 
 # adjust process limits
 # so far does not seem necessary
