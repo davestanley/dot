@@ -10,25 +10,29 @@ alias dot="cd ~/src/dot/"
 
 alias textedit=/Applications/TextEdit.app/Contents/MacOS/TextEdit
 
-#ssh
-alias ssh_neuro="ssh kellyb@ssh.neuro.berkeley.edu"
-
-
 #sshfs
 #need to make this more cross-computer friendly
 #alias sshfs_neuro="sshfs -o follow_symlinks kellyb@macfuse.neuro.berkeley.edu: /home/httf/HWNI/"
 
-#linux aliases
-#pipe to for clipboard
-alias clip="xclip -sel clip"
+# OS specific aliases
+OS=`uname -a`
 
-#mac aliases -- need to make this conditional. Also the linux one.
-#alias clip="pbcopy"
+# Linux aliases
+if [[ $OS == Linux* ]] ; then
+    #pipe to for clipboard
+    alias clip="xclip -sel clip"
+fi
 
-#machine specific aliases follow
+# Mac aliases
+if [[ $OS == Darwin* ]] ; then
+    #pipe to for clipboard
+    alias clip="pbcopy"
+fi
+
+# Machine specific aliases follow
 #alias sshfs_HWNI="/usr/local/sshfs/sshfs-static-leopard -o follow_symlinks kellyb@macfuse.neuro.berkeley.edu: ~/Desktop/HWNI"
 
-#golgi
+# On golgi
 if [ `hostname` = "golgi" ]; then
    alias matlab=/usr/local/MATLAB/R2011b/bin/matlab
 fi
