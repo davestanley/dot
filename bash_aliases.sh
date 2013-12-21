@@ -8,8 +8,6 @@ alias untar="~/src/dot/untar.sh"
 alias ls="ls -GFh"
 alias dot="cd ~/src/dot/"
 
-alias textedit=/Applications/TextEdit.app/Contents/MacOS/TextEdit
-
 #sshfs
 #need to make this more cross-computer friendly
 #alias sshfs_neuro="sshfs -o follow_symlinks kellyb@macfuse.neuro.berkeley.edu: /home/httf/HWNI/"
@@ -27,6 +25,7 @@ fi
 if [[ $OS == Darwin* ]] ; then
     #pipe to for clipboard
     alias clip="pbcopy"
+    alias textedit=/Applications/TextEdit.app/Contents/MacOS/TextEdit
 fi
 
 # Machine specific aliases follow
