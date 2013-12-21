@@ -1,5 +1,8 @@
-Host scf
+Host scc
      HostName scc1.bu.edu
+     User kagb
+Host scc_vnc
+     HostName scc2.bu.edu
      User kagb
 Host hwni
      HostName ssh.neuro.berkeley.edu
