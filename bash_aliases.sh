@@ -8,6 +8,11 @@ alias untar="~/src/dot/untar.sh"
 alias ls="ls -GFh"
 alias dot="cd ~/src/dot/"
 
+# Function for renaming terminals
+function title {
+  printf "\033]0;%s\007" "$1"
+}
+
 #sshfs
 #need to make this more cross-computer friendly
 #alias sshfs_neuro="sshfs -o follow_symlinks kellyb@macfuse.neuro.berkeley.edu: /home/httf/HWNI/"
