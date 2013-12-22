@@ -3,8 +3,8 @@
 # git repo path
 dir=~/src/dot
 
-# softlink dotfiles
-files="bashrc bash_aliases.sh gitconfig"
+# softlink home folder dotfiles
+files="bashrc bash_aliases.sh gitconfig emacs"
 for file in $files; do
     ln -s $dir/$file ~/.$file 2> /dev/null
 done
