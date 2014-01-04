@@ -24,6 +24,7 @@ OS=`uname -a`
 if [[ $OS == Linux* ]] ; then
     #pipe to for clipboard
     alias clip="xclip -sel clip"
+    alias skype_restart="killall -9 skype; skype &"
 fi
 
 # Mac aliases
