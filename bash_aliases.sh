@@ -9,7 +9,9 @@ alias ls="ls -GFh"
 alias dot="cd ~/src/dot/"
 
 # Function for renaming terminals
-function title() { printf "\033]0;%s\007" "$1" }
+function title { 
+    printf "\033]0;%s\007" "${1}" 
+}
 
 #sshfs
 #need to make this more cross-computer friendly
