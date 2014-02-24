@@ -40,4 +40,7 @@ fi
 # On golgi
 if [ `hostname` = "golgi" ]; then
    alias matlab=/usr/local/MATLAB/R2011b/bin/matlab
+   # Add RVM to PATH for scripting
+   PATH=$PATH:$HOME/.rvm/bin
+   source ~/.rvm/scripts/rvm
 fi
