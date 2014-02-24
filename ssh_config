@@ -1,19 +1,9 @@
 Host scc1
      HostName scc1.bu.edu
-     User kagb
+     User stanleyd
 Host scc2
      HostName scc2.bu.edu
-     User kagb
-Host scc_vnc
-     HostName scc2.bu.edu
-     User kagb
-Host hwni
-     HostName ssh.neuro.berkeley.edu
-     User kellyb
-Host hydra
-     HostName hydra.vistahigherlearning.com
-     User kbuchanan
-Host austin
-     HostName 71.232.26.50
-     User winterloop
-     IdentityFile ~/.ssh/austin
+     User stanleyd
+Host scc3
+     HostName scc3.bu.edu
+     User stanleyd
