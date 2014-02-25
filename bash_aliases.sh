@@ -5,7 +5,7 @@ alias emacs="emacs -nw"
 alias src="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
 alias lt="ls -lt | head"
 alias untar="~/src/dot/untar.sh"
-alias ls="ls -GFh"
+alias ls="ls -GFh --color=auto"
 alias dot="cd ~/src/dot/"
 
 # Function for renaming terminals
