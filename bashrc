@@ -5,8 +5,8 @@ export EDITOR=emacs
 #in case I use svn again
 export SVN_EDITOR=emacs
 
-echo "Bash files:"
-ls -al | grep bash
+#echo "Bash files:"
+#ls -al | grep bash
 # iterate over bashrc script files
 for script in ~/.bash_*.sh
 do

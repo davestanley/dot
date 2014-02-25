@@ -5,7 +5,6 @@ alias emacs="emacs -nw"
 alias src="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
 alias lt="ls -lt | head"
 alias untar="~/src/dot/untar.sh"
-alias ls="ls -GFh --color=auto"
 alias dot="cd ~/src/dot/"
 
 # Function for renaming terminals
@@ -25,6 +24,8 @@ if [[ $OS == Linux* ]] ; then
     #pipe to for clipboard
     alias clip="xclip -sel clip"
     alias skype_restart="killall -9 skype; skype &"
+    alias ls="ls -GFh --color=auto"
+
 fi
 
 # Mac aliases
@@ -32,6 +33,7 @@ if [[ $OS == Darwin* ]] ; then
     #pipe to for clipboard
     alias clip="pbcopy"
     alias textedit=/Applications/TextEdit.app/Contents/MacOS/TextEdit
+    alias ls="ls -GFh"
 fi
 
 # Machine specific aliases follow
