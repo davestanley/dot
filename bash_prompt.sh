@@ -69,4 +69,9 @@ ps1_git="$Yellow\$(parse_git_branch)$Red\$(git_dirty)$NONE"
 # export PS1="${ps1_user}@${ps1_host}:${ps1_dir}${ps1_git} \[\$\] "
 # renders as: dir(branch)! >>
 #export PS1="${ps1_dir}${ps1_git} \[\>>\] "
-export PS1="\h:\W \u${ps1_git}\$ "
+
+# Follow OSX convention
+#export PS1="\h:\W \u${ps1_git}\$ "
+
+# Follow Ubuntu convention
+export PS1="\u@\h:\W${ps1_git}$ "

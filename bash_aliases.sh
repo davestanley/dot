@@ -25,6 +25,9 @@ if [[ $OS == Linux* ]] ; then
     alias clip="xclip -sel clip"
     alias skype_restart="killall -9 skype; skype &"
     alias ls="ls -GFh --color=auto"
+    alias egrep='egrep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias grep='grep --color=auto'
 
 fi
 
