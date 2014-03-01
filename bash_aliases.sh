@@ -6,6 +6,8 @@ alias src="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
 alias lt="ls -lt | head"
 alias untar="~/src/dot/untar.sh"
 alias dot="cd ~/src/dot/"
+alias bin="cd ~/src/bin/"
+alias ds_kb="cd ~/src/ds_kb/"
 
 # Function for renaming terminals
 function title { 
