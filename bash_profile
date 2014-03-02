@@ -9,8 +9,6 @@ fi
 
 # User specific environment and startup programs
 
-PATH=$PATH:$HOME/bin
-
 if [ -x /usr/local/bin/msgs ]; then
    /usr/local/bin/msgs -f
 fi
