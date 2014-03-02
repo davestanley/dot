@@ -44,10 +44,3 @@ fi
 # Machine specific aliases follow
 #alias sshfs_HWNI="/usr/local/sshfs/sshfs-static-leopard -o follow_symlinks kellyb@macfuse.neuro.berkeley.edu: ~/Desktop/HWNI"
 
-# On golgi
-if [ `hostname` = "golgi" ]; then
-   alias matlab=/usr/local/MATLAB/R2011b/bin/matlab
-   # Add RVM to PATH for scripting
-   PATH=$PATH:$HOME/.rvm/bin
-   source ~/.rvm/scripts/rvm
-fi
