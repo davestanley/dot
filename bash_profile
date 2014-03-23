@@ -12,3 +12,6 @@ fi
 if [ -x /usr/local/bin/msgs ]; then
    /usr/local/bin/msgs -f
 fi
+
+# added by Anaconda 1.8.0 installer
+export PATH="/Users/davestanley/anaconda/bin:$PATH"
