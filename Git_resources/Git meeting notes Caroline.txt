@@ -1,0 +1,26 @@
+
+
+Git aliases
+
+Git upstage - removes files from staging
+
+Git cam - commit all with messages
+
+
+Fiurst time you push a branch , need to know what upstream is
+
+Git fpush - push to the origin with the branch name that is the same as the normal name. Use this when pushing for the first time.
+
+Squashing - compressing a  lot of commits on my branch.
+
+
+Git uncommit
+
+Git st
+
+Git commit —amend
+
+
+
+
+

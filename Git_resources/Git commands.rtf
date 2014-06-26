@@ -1,0 +1,354 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 ArialMT;
+}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;}
+\margl1440\margr1440\vieww12240\viewh15840\viewkind1
+\deftab720
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\f1 \cf0 \expnd0\expndtw0\kerning0
+Dave's command list:\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b \cf0 \expnd0\expndtw0\kerning0
+# Setting up a repository for the first time:
+\b0 \expnd0\expndtw0\kerning0
+\
+  git config --global user.name "David Stanley"\
+  git config --global user.email "davearthur.stanley@gmail.com"\
+  git config --global credential.helper cache\
+  git config --global credential.helper 'cache --timeout=3600'\
+\
+  git clone git@github.com:CRC-BU/ds_kb.git\
+\
+
+\b \expnd0\expndtw0\kerning0
+# Also needed to run this on my Mac
+\b0 \expnd0\expndtw0\kerning0
+\
+  git config --global push.default simple\
+\
+\
+
+\b \expnd0\expndtw0\kerning0
+# Setup email and key
+\b0 \expnd0\expndtw0\kerning0
+\
+  ssh-keygen -t rsa -C "davearthur.stanley@gmail.com"\
+  cd ~/.ssh/\
+  cat id_rsa.pub\
+\
+
+\b \expnd0\expndtw0\kerning0
+# Repository copy
+\b0 \expnd0\expndtw0\kerning0
+\
+To copy a repository over to a new machine:\
+Clone a repository: git clone git@github.com:CRC-BU/spike_field_assoc_dev.git\
+Then, view vailable branches: git branch -a\
+git checkout dave\
+git pull\
+Done.\
+\
+
+\b \expnd0\expndtw0\kerning0
+# Stashing
+\b0 \expnd0\expndtw0\kerning0
+\
+git stash			- stash current work\
+git stash list			- list all stashes\
+git stash apply		- pop top stash from stash stack\
+git stash apply --index	- pop top stash from stash stack and apply staging\
+git stash unapply		- push current changes back onto stash stack\
+\
+\
+Force a reset to an older state:\
+git reset --hard HEAD~1\
+git reset --soft HEAD~1\
+\
+\
+
+\b \expnd0\expndtw0\kerning0
+Branching stuff (not sure what this is for, or if it even works):
+\b0 \expnd0\expndtw0\kerning0
+\
+Creating a new branch, syncing to origin:\
+git remote add origin/dave remote/origin/dave\
+\
+
+\b \expnd0\expndtw0\kerning0
+Create new branch local branch and syncing to git hub
+\b0 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
+\cf0 \expnd0\expndtw0\kerning0
+git checkout -b scc\
+git push --set-upstream origin scc             # This will add appropriate lines to .git/config to tell git where to push and pull to remote branch\
+cat .git/config\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\
+Revert to earlier time point:\
++  566  git checkout 8e061a947a3657a4f8da39ff4e096f853bb328ed\
+  567  git log\
++  568  git branch Christmas_dave\
++  569  git push origin Christmas_dave\
+  570  git log\
+  572  git checkout dave\
+  573  git branch -a\
+  574  git checkout Christmas_dave\
+  575  git log\
+  576  git pull\
++  577  git branch --set-upstream-to=origin/Christmas_dave Christmas_dave\
+  578  git pull\
+  579  git log\
+  580  git checkout dave\
+  581  git log\
+\
+Push and pull until it works.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b \cf0 \expnd0\expndtw0\kerning0
+\ul \ulc0 Working with remote repositories\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+\ulnone git remote -v \'97> shows remote branches\
+git remote\
+git fetch kelly_dot\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b \cf0 \expnd0\expndtw0\kerning0
+Add / remove a remote branch:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+git remote add kelly_dot git@github.com:hurtstotouchfire/dot.git\
+git remote rm upstream\
+	* I\'92m not sure how this is different from git branch -d \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b \cf0 \expnd0\expndtw0\kerning0
+A good link describing everything:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+http://git-scm.com/book/en/Git-Basics-Working-with-Remotes\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b \cf0 \expnd0\expndtw0\kerning0
+To add a remote branch and merge with master:\
+\pard\pardeftab720
+
+\f2\b0\fs26 \cf2 \expnd0\expndtw0\kerning0
+git remote add kelly_dot git@github.com:hurtstotouchfire/dot.git\
+git fetch kelly_dot\
+git checkout master\
+git merge upstream/master\
+git mergetool\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+	More info here: https://help.github.com/articles/syncing-a-fork\
+\
+\
+\
+Merging\
+Good tutorial on merging to keep either \'93ours\'94 or \'93theirs\'94\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+http://stackoverflow.com/questions/161813/how-do-i-fix-merge-conflicts-in-git\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\f1 \cf0 \expnd0\expndtw0\kerning0
+git checkout master\
+git merge dave\
+git mergetool\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b \cf0 \expnd0\expndtw0\kerning0
+\
+Resolving merge conflicts and the <<<<<< HEAD crap\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+http://stackoverflow.com/questions/15291056/git-corrupt-files-head\
+You can simply update your files manually, by deciding to keep everything between <<<<<<< HEAD and =======, or between ======= and >>>>>>>, or some mix of the two. Once you resolve all your conflicts, you just need to commit your changes.\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+To discard local changes on a file, you can do: git checkout yourfile\
+\
+or, for all files using: git checkout -- .\
+\
+You can also decide, for each file, if you want to keep your version or the repository version with\
+\
+git checkout --ours yourfile # Your version\
+git checkout --theirs yourfile # Repository version\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b \cf0 \expnd0\expndtw0\kerning0
+\ul Git change origin\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+\ulnone git remote set-url origin git@github.com:davestanley/dot_old.git\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\i\b \cf0 \expnd0\expndtw0\kerning0
+\ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720
+
+\i0\b0 \cf0 \expnd0\expndtw0\kerning0
+\ulnone Other crap\
+\
+\
+\
+\
+git status\
+\
+git add\
+git reset HEAD filename\
+git checkout filename\
+\
+git commit\
+git commit -m "asdfadsfafff log info"\
+\
+\
+\
+git clone git@github.com:CRC-BU/spike_field_assoc_dev.git\
+git branch\
+git branch\
+git fetch\
+git branch -a\
+git branch dave\
+git checkout dave\
+git checkout -b dave2\
+git checkout dave\
+git branch -d dave2\
+git status\
+git commit\
+\
+git push\
+git add *\
+git commit -m "adding another test file"\
+git diff\
+git log\
+git config --global push.default simple\
+git remote add origin/dave remote/origin/dave\
+\
+git push origin origin/dave\
+\
+git add test.m\
+git commit -am "blah"\
+git push --set-upstream origin dave\
+\
+I figured out what I do with new branches.\
+\
+git checkout parent_branch\
+git pull\
+git checkout -b child_branch\
+\
+Now I have a new local branch. I make my commits and stuff and then\
+when I make the first push I get this:\
+\
+~/dev/m3r2 ree-1.8.7:(child_branch)$ git push\
+fatal: The current branch child_branch has no upstream branch.\
+To push the current branch and set the remote as upstream, use\
+\
+    git push --set-upstream origin child_branch\
+\
+And then I use that command. After this, I can just use git push with\
+no other arguments and it works.\
+\
+So, I think that's the simplest way to do it.\
+\
+Also, to get your branch on your command line, I have some stuff in my\
+bashrc file. I just added you to my dotfiles repo, which is private.\
+You can fork it if you like, or just copy whatever code you find\
+useful. This commit shows how to change the colors:\
+https://github.com/hurtstotouchfire/dot/commit/aa6aa2ff851bbdedaca6bf53d3d869d743b0bee4\
+\
+You should also probably use this (change name and email):\
+https://github.com/hurtstotouchfire/dot/blob/master/gitconfig because\
+it will set all the nice defaults for rebasing and stuff like that.\
+Also has some aliases in it, which you could change. Those are git\
+aliases, as opposed to bash aliases, so to use them you would say\
+like, git st for git status. Some of my friends use bash aliases\
+instead, i.e. gst for git status. Anyway that file goes in your home\
+directory, i.e. ~/.gitconfig. I like these git aliases though. git lg\
+is a particularly nice one. It's all configured to be pretty. Attached\
+is a screenshot that shows git lg and my prompt.\
+\
+I'm adding some git aliases for that new branch procedure now.\
+Simplifies things a bit:\
+https://github.com/hurtstotouchfire/dot/commit/c69a5608afd9224b2e75f591c4c2ead7614e240e#commitcomment-4798107\
+\
+-K\
+\
+\
+(From http://interlinked.org/tutorials/git.html)\
+git config --global user.name "Your Name"\
+git config --global user.email your.mail@host.com\
+git config --global color.ui auto\
+git config --global color.interactive auto\
+\
+\
+\
+GIT Resources\
+http://interlinked.org/tutorials/git.html\
+http://osteele.com/posts/2008/05/my-git-workflow\
+http://documentup.com/skwp/git-workflows-book\
+https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html\
+http://ktown.kde.org/~zrusin/git/\
+	\
+\
+\
+\
+GIT COMMANDS:\
+git rebase: So what rebase does is stash your changes, grab the latest from master, and then apply your changes on top. This effectively makes it as if rather than branching several days ago, you just branched now from te tip of the master and made your commits there.\
+\
+\
+\
+git reset: Let's say you committed or pulled in 3 commits and now you realized you no longer want them:\
+\
+git reset --hard HEAD~3\
+\
+This command tells us to revert the repository state to that of 3 commits ago. Note: this will effectively throw away your last 3 commits and reset your current branch's HEAD to point to HEAD~3, 3 commits ago.\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

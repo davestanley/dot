@@ -1,0 +1,65 @@
+ 2131  cd /data/Anco/src/
+ 2132  ls
+ 2133  git clone git@github.com:CRC-BU/spike_field_assoc_dev.git
+ 2134  git branch
+ 2135  ls
+ 2136  cd spike_field_assoc_dev/
+ 2137  ls
+ 2138  git branch
+ 2139  git fetch
+ 2140  git branch
+ 2141  git branch -a
+ 2142  git branch dave
+ 2143  git branch -a
+ 2144  git branch
+ 2145  git checkout dave
+ 2146  git branch
+ 2147  git checkout -b dave2
+ 2148  git branch
+ 2149  git checkout dave
+ 2150  git branch
+ 2151  git branch -d dave2
+ 2152  git branch
+ 2153  git status
+ 2154  nano glm_sfa_pl.m
+ 2155  nano test.m
+ 2156  git status
+ 2157  git add test
+ 2158  git add test.m
+ 2159  git status
+ 2160  git commit
+ 2161  git status
+ 2162  git push
+ 2163  nano test2.m
+ 2164  git status
+ 2165  git add *
+ 2166  git commit -m "adding another test file"
+ 2167  git diff
+ 2168  git log
+ 2169  nano test
+ 2170  nano test.m 
+ 2171  nano test2.m 
+ 2172  git diff
+ 2173  git branch -a
+ 2174  git push origin
+ 2175  git push origin dave
+ 2176  git branch -a
+ 2177  man git
+ 2178  git push origin
+ 2179  git config --global push.default simple
+ 2180  git remote add origin/dave
+ 2181  git remote add origin/dave -f
+ 2182  git remote add origin/dave remote/origin/dave
+ 2183  git push origin origin/dave
+ 2184  git branch
+ 2185  git branch -a
+ 2186  git status
+ 2187  git add test.m
+ 2188  git status
+ 2189  git commit -am "blah"
+ 2190  git push
+ 2191  git push --set-upstream origin dave
+ 2192  pwd
+ 2193  cd ..
+ 2194  ls
+
