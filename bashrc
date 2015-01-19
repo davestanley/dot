@@ -28,6 +28,5 @@ done
 # Setup paths
 PATH=$PATH:$HOME/bin
 
-export PATH=$PATH:$HOME/src/dsim/csh
 
 
