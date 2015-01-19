@@ -41,3 +41,7 @@
         stat = true
 
 [pager]
+        diff = less -r
+        log = less
+        show = less -r
+
