@@ -28,7 +28,6 @@ done
 # Setup paths
 PATH=$PATH:$HOME/bin
 
-
 # added by Anaconda 1.8.0 installer
 export PATH="/Users/davestanley/anaconda/bin:$PATH"
 
@@ -57,4 +56,7 @@ export PATH=/Users/davestanley/Apps/genesis-2.3/genesis:$PATH
 
 
 
+# Set history size
+HISTSIZE=50000
+HISTFILESIZE=50000
 
