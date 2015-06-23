@@ -1,3 +1,4 @@
+#!/bin/bash
 # Configure bash prompt
 # Regular Colors
 Black='\[\e[0;30m\]'        # Black

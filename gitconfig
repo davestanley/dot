@@ -1,6 +1,6 @@
 [user]
-        name = David Stanley
-        email = davearthur.stanley@gmail.com
+	name = David Stanley
+	email = davearthur.stanley@gmail.com
 [color]
         diff = auto
         status = auto
@@ -34,7 +34,7 @@
 [rerere]
         enabled = 1
 [push]
-        default = tracking
+	default = simple
 [diff]
         mnemonicprefix = true
 [merge]
@@ -45,3 +45,5 @@
         log = less
         show = less -r
 
+[credential]
+	helper = cache --timeout=3600

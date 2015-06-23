@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # default .bash_profile
 # 03/31/13
