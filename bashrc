@@ -28,7 +28,9 @@ done
 # Setup paths
 PATH=$PATH:$HOME/bin
 
-
+# Set history size
+HISTSIZE=50000
+HISTFILESIZE=50000
 
 # Jason's simulator
 export PATH=$PATH:$HOME/src/dsim/csh
