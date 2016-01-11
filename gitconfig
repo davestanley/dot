@@ -34,7 +34,7 @@
 [rerere]
         enabled = 1
 [push]
-	default = simple
+
 [diff]
         mnemonicprefix = true
 [merge]
