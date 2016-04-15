@@ -32,3 +32,6 @@ PATH=$PATH:$HOME/bin
 HISTSIZE=50000
 HISTFILESIZE=50000
 
+# For neuron
+export PYTHONHOME=/usr/
+
