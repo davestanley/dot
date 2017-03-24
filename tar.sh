@@ -1,3 +1,4 @@
 
 file=$1;
-tar -cvf $file;
+list=$2
+tar -cvf $file $list
