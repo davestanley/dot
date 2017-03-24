@@ -56,4 +56,6 @@ MCR_CACHE_ROOT=~/.mcrCache8.1
 export MCR_CACHE_ROOT
 
 
+# For neuron
+export PYTHONHOME=/usr/
 
