@@ -14,6 +14,7 @@
         cm = commit -m
         cam = commit -am
         br = branch
+	bra = branch -a
         co = checkout
 	nb = checkout -b
 	fpush = push origin -u HEAD
@@ -29,7 +30,7 @@
         whitespace = trailing-space,space-before-tab
         filemode = false
         autocrlf = input
-	editor = emacs
+	editor = nano
 	excludesfile = ~/src/dot/gitignore_global
 [rerere]
         enabled = 1

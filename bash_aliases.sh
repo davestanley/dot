@@ -7,7 +7,13 @@ alias lt="ls -lt | head"
 alias untar="~/src/dot/untar.sh"
 alias dot="cd ~/src/dot/"
 alias bin="cd ~/src/bin/"
-alias ds_kb="cd ~/src/ds_kb/"
+alias ds_kb3="cd ~/src/ds_kb3/"
+alias kram="cd ~/src2/model-dnsim-kramer_IB"
+alias DSS="cd ~/src/DynaSimSherfey"
+alias MDD="cd ~/src/DynaSimSherfey/dependencies/MDD"
+alias gcam="git commit -am"
+alias gbra="git branch -a"
+alias gdf="git diff"
 
 # Function for renaming terminals
 function title { 
