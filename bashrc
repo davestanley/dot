@@ -59,3 +59,7 @@ export MCR_CACHE_ROOT
 # For neuron
 export PYTHONHOME=/usr/
 
+
+# Stuff for making git compatible with submodules
+module load git/2.6.3
+module load libcurl
