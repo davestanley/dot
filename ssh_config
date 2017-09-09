@@ -7,3 +7,7 @@ Host scc2
 Host scc3
      HostName scc3.bu.edu
      User stanleyd
+
+Host *
+ServerAliveInterval 100
+
