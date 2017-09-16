@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Load module
+module load matlab/2017a
+
 # make emacs everywhere
 export EDITOR=emacs
 #in case I use svn again
