@@ -59,5 +59,4 @@ HISTSIZE=50000
 HISTFILESIZE=50000
 
 # For neuron
-export PYTHONHOME=/usr/
-
+# export PYTHONHOME=/usr/	# This produces an error when running Anaconda Python, so will comment it out for now
