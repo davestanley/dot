@@ -28,9 +28,6 @@ done
 # Setup paths
 PATH=$PATH:$HOME/bin
 
-# added by Anaconda 1.8.0 installer
-export PATH="/Users/davestanley/anaconda/bin:$PATH"
-
 # Open MPI
 #export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/Cellar/open-mpi/1.8.1/lib
 
