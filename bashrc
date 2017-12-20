@@ -1,4 +1,5 @@
-#!/bin/bash
+
+#!/bin/bash -l
 
 # Load module
 module load matlab/2017a
@@ -62,7 +63,12 @@ export MCR_CACHE_ROOT
 # For neuron
 export PYTHONHOME=/usr/
 
-
+# # Load BU SCC Modules
 # Stuff for making git compatible with submodules
 module load git/2.6.3
 module load libcurl
+
+# Stuff for running Octave
+module use /share/module/centos7
+module load octave/4.2.1
+
