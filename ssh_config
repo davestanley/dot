@@ -8,6 +8,18 @@ Host scc3
      HostName scc3.bu.edu
      User stanleyd
 
-Host *
-ServerAliveInterval 100
+#Host *
+#ServerAliveInterval 100
+
+#default github account
+Host github.com-davestanley
+	HostName github.com
+	User git
+	IdentityFile /Users/davestanley/.ssh/id_rsa
+
+#ncompany account
+Host github.com-ncompanytech
+	HostName github.com
+	User git
+	IdentityFile /Users/davestanley/.ssh/id_rsa_ncompany
 
