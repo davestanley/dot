@@ -9,17 +9,25 @@ Host scc3
      User stanleyd
 
 #Host *
-#ServerAliveInterval 100
+# AddKeysToAgent yes
+# UseKeychain yes
+# IdentityFile /Users/davestanley/.ssh/id_rsa_ncompany
 
-#default github account
-Host github.com-davestanley
+
+default github account
+Host github.com
 	HostName github.com
+        IdentitiesOnly yes
 	User git
 	IdentityFile /Users/davestanley/.ssh/id_rsa
 
 #ncompany account
-Host github.com-ncompanytech
-	HostName github.com
-	User git
-	IdentityFile /Users/davestanley/.ssh/id_rsa_ncompany
+Host ncompanytech.github.com
+  HostName github.com
+  PreferredAuthentications publickey
+  #AddKeysToAgent yes
+  #UseKeychain yes
+  IdentitiesOnly yes
+  User git
+  IdentityFile /Users/davestanley/.ssh/id_rsa_ncompany
 
