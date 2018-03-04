@@ -16,18 +16,19 @@ Host scc3
 
 #default github account
 Host github.com
-	HostName github.com
-        IdentitiesOnly yes
-	User git
-	IdentityFile /Users/davestanley/.ssh/id_rsa
-
-#ncompany account
-Host ncompanytech.github.com
   HostName github.com
-  PreferredAuthentications publickey
   AddKeysToAgent yes
   UseKeychain yes
   IdentitiesOnly yes
   User git
-  IdentityFile /Users/davestanley/.ssh/id_rsa_ncompany
+  IdentityFile ~/.ssh/id_rsa
+
+#ncompany account
+Host ncompanytech.github.com
+  HostName github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentitiesOnly yes
+  User git
+  IdentityFile ~/.ssh/id_rsa_ncompany
 
