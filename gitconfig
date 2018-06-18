@@ -28,10 +28,12 @@
         autosetuprebase = always
 [core]
         whitespace = trailing-space,space-before-tab
-        filemode = false
+	fileMode = false
         autocrlf = input
 	editor = nano
 	excludesfile = ~/src/dot/gitignore_global
+	preloadindex = true
+	fscache = true
 [rerere]
         enabled = 1
 [push]
@@ -48,3 +50,5 @@
 
 [credential]
 	helper = cache --timeout=3600
+[gc]
+	auto = 256
