@@ -4,7 +4,7 @@
 dir=~/src/dot
 
 # softlink home folder dotfiles
-files="bashrc bash_aliases.sh gitconfig emacs bash_prompt.sh bash_profile"
+files="bashrc bash_aliases.sh gitconfig emacs bash_prompt.sh bash_profile bash_windows.sh"
 for file in $files; do
     ln -s $dir/$file ~/.$file 2> /dev/null
 done
