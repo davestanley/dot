@@ -8,14 +8,14 @@ alias untar="~/src/dot/untar.sh"
 alias dot="cd ~/src/dot/"
 alias bin="cd ~/src/bin/"
 alias ds_kb3="cd ~/src/ds_kb3/"
-alias kram="cd ~/src2/model-dnsim-kramer_IB"
-alias DSS="cd ~/src/DynaSimSherfey"
-alias MDD="cd ~/src/DynaSimSherfey/functions/dependencies/MDD_SM"
-alias krDSS="cd ~/src2/model-dnsim-kramer_IB/DynaSim"
-alias krMDD="cd ~/src2/model-dnsim-kramer_IB/DynaSim/functions/dependencies/MDD_SM"
+alias kram="cd ~/GDrive_extras/git/model-dnsim-kramer_IB"
+alias krDSS="cd ~/GDrive_extras/git/model-dnsim-kramer_IB/DynaSim"
+alias krMDD="cd ~/GDrive_extras/git/model-dnsim-kramer_IB/DynaSim/functions/dependencies/MDD_SM"
 alias gcam="git commit -am"
 alias gbra="git branch -a"
 alias gdf="git diff"
+	# For downloading Youtube playslists with appended track number
+alias youtube-dl-pl='youtube-dl -o "%(playlist_index)s-%(title)s.%(ext)s"'
 
 # Function for renaming terminals
 function title { 
