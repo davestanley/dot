@@ -28,6 +28,10 @@ done
 # Setup paths
 PATH=$PATH:$HOME/bin
 
+# For GitHub and src folder
+export PATH_GITHUB=$HOME/GDrive/from_Dropbox/git
+export PATH_SRC=$HOME/src
+
 # Set history size
 # HISTSIZE=50000
 # HISTFILESIZE=50000
