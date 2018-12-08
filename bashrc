@@ -53,7 +53,7 @@ export PATH=/Users/davestanley/Apps/genesis-2.3/genesis:$PATH
 export HOMEBREW_GITHUB_API_TOKEN="c015b77d47bff83e03f6c49286f0d1b48bc2f234"
 
 # For GitHub and src folder
-export PATH_GITHUB=$HOME/GDrive/from_Dropbox/git
+export PATH_GITHUB=$HOME/Dropbox/git
 export PATH_SRC=$HOME/src
 
 # Set history size
