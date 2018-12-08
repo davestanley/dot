@@ -2,20 +2,22 @@
 
 alias emacs-w="/usr/bin/emacs"
 alias emacs="emacs -nw"
-alias src="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
+alias resrc="source ~/.bashrc &> /dev/null; source ~/.bash_profile &> /dev/null"
 alias lt="ls -lt | head"
 alias untar="~/src/dot/untar.sh"
+alias gitdir="cd ~/Dropbox/git"
+alias src="cd ~/src/"
 alias dot="cd ~/src/dot/"
 alias bin="cd ~/src/bin/"
-alias ds_kb3="cd ~/src/ds_kb3/"
-alias kram="cd ~/src2/model-dnsim-kramer_IB"
-alias DSS="cd ~/src/DynaSimSherfey"
-alias MDD="cd ~/src/DynaSimSherfey/functions/dependencies/MDD_SM"
-alias krDSS="cd ~/src2/model-dnsim-kramer_IB/DynaSim"
-alias krMDD="cd ~/src2/model-dnsim-kramer_IB/DynaSim/functions/dependencies/MDD_SM"
+alias ds_kb="cd ~/src/ds_kb3/"
+alias kram="cd ~/src/model-dnsim-kramer_IB"
+alias krDSS="cd ~/src/model-dnsim-kramer_IB/DynaSim"
+alias krMDD="cd ~/src/model-dnsim-kramer_IB/DynaSim/functions/dependencies/MDD_SM"
 alias gcam="git commit -am"
 alias gbra="git branch -a"
 alias gdf="git diff"
+	# For downloading Youtube playslists with appended track number
+alias youtube-dl-pl='youtube-dl -o "%(playlist_index)s-%(title)s.%(ext)s"'
 
 # Function for renaming terminals
 function title { 
