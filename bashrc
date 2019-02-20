@@ -53,6 +53,10 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # Enable window resizing with super-right click in Ubuntu
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 
+# Disable cross-workspace alt-tab switching
+dconf write /org/gnome/shell/app-switcher/current-workspace-only 'true'
+
+
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
